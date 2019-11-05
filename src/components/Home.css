@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito:300,300i,400,700&display=swap');
+
+.landing-page{
+    height: 100vh;
+    width: 100vw;
+    background: url("../resources/mainbackgound.png");
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-size: cover;
+    font-family: 'Nunito', sans-serif;
+    /* display: flex;
+    flex-flow: row nowrap; */
+}
+
+.title {
+    width: 500px;
+    height: 400px;
+    order: 2;
+    position: relative;
+    margin: 140px 225px;
+}
