@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import TodoList from './TodoList'
 
 export default class Todo extends Component {
     state = {
@@ -10,23 +11,20 @@ export default class Todo extends Component {
         this.setState({ newTodo: event.target.value})
     }
     handleSubmit = event => {
-        const { todos, newTodo } = this.state
         event.preventDefault()
-        this.setState({ ...todos, newTodo})
-        return <li>
-            this.state.newTodo
-        </li>
+        const { todos, newTodo } = this.state
+        this.setState({ todos: [...todos, newTodo]})
+        console.log(todos)
+        this.setState({ newTodo: ''})
     }
     render() {
         return (
             <div className='todo'>
-                <ul>
-                    <li>Deep breaths</li>
-                </ul>
                 <form onSubmit={this.handleSubmit}>
                     <input type='text' placeholder='What are you feeling' value={this.state.newTodo} onChange={this.handleChange}></input>
                     <input type='submit' value='Add thought'></input>
                 </form>
+                <TodoList todos={this.state.todos}/>
             </div>
         )
     }

@@ -1,8 +1,9 @@
-.quote-container{
+.quote-container {
+    background: #ff8000;
     color: white;
     display: flex;
     justify-content: flex-start;
-    border: 1px solid white;
+    border: 1px solid #f4a568;
     margin: 5rem;
     padding: 2rem;
     padding-right: 3rem;
